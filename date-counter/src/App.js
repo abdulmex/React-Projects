@@ -12,36 +12,56 @@ function Counter() {
   const [count, setCount] = useState(0);
   const [step, setStep] = useState(1);
 
+  function handleReset() {
+    setCount(0);
+    setStep(1);
+  }
+
   const date = new Date("june 21 2027");
   date.setDate(date.getDate() + count);
 
   return (
     <div>
       <div>
-        <h1>Date Counter</h1>
-        <button onClick={() => setStep((c) => c - 1)}>-</button>
-        <span className="step-count">Step: {step}</span>
-        <button onClick={() => setStep((c) => c + 1)}>+</button>
+        <input
+          type="range"
+          min="0"
+          max="10"
+          value={step}
+          onChange={(e) => setStep(Number(e.target.value))}
+        />
+        <span>Step: {step}</span>
       </div>
 
       <div>
         <button onClick={() => setCount((c) => c - step)}>-</button>
-        <span className="step-count">Count: {count}</span>
+        <input
+          className="date-input"
+          type="text"
+          value={count}
+          onChange={(e) => setCount(Number(e.target.value))}
+        />
         <button onClick={() => setCount((c) => c + step)}>+</button>
       </div>
 
-      <div className="text">
-        <p>
-          <span>
-            {count === 0
-              ? "Today is "
-              : count > 0
-              ? `${count} days from today is `
-              : `${Math.abs(count)} days ago was `}
-          </span>
-          <span>{date.toDateString()}</span>
-        </p>
-      </div>
+      <p>
+        <span>
+          {count === 0
+            ? "Today is "
+            : count > 0
+            ? `${count} days from today is `
+            : `${Math.abs(count)} days ago was `}
+        </span>
+        <span>{date.toDateString()}</span>
+      </p>
+
+      {count !== 0 || step !== 1 ? (
+        <div>
+          <button className="btn-reset" onClick={handleReset}>
+            Reset
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }

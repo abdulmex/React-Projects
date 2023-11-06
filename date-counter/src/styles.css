@@ -20,12 +20,29 @@ button:hover {
   background-color: yellow;
   border: none;
 }
+.btn-reset {
+  width: 20%;
+  background-color: greenyellow;
+  border-radius: 50px;
+  margin: 20px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
 .step-count {
   font-weight: 900;
 }
 .text {
-  color: green;
+  color: #000;
   text-transform: uppercase;
   font-size: larger;
   font-weight: 600;
+}
+.date-input {
+  height: 4vh;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 20px;
+  background-color: burlywood;
+  border: 2px solid slategray;
 }
