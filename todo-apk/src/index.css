@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #171723;
+  font-family: "Edu TAS Beginner", cursive;
+}
+/* header */
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  color: azure;
+  padding: 2%;
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+/* input */
+.input {
+  font-size: 1em;
+  color: azure;
+  background-color: rgb(47, 47, 49);
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+  border-radius: 0.5vw;
+  border: none;
+  outline: none;
+  padding: 0.5vw;
+  transition: 0.4s;
+  text-align: center;
+}
+.input:hover {
+  box-shadow: 0 0 0 0.15vw rgba(135, 207, 235, 0.186);
+}
+.input:focus {
+  box-shadow: 0 0 0 0.15vw skyblue;
+}
+.btns {
+  padding: 0.5vw;
+  border-radius: 0.4vw;
+  background-color: #4f46e5;
+  color: azure;
+  border: none;
+  font-size: 1em;
+  font-weight: bolder;
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+}
+/* form   */
+.task-item {
+  margin-top: 10vh;
+}
+.list ul {
+  width: 80%;
+  height: 55vh;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  align-content: start;
+}
+li {
+  display: flex;
+  gap: 0.5rem;
+  color: azure;
+  font-size: 1.2em;
+}
+input[type="checkbox"] {
+  width: 1rem;
+  accent-color: #4f46e5;
+  cursor: pointer;
+}
+.item-btn {
+  border: none;
+}
+select {
+  padding: 0.6vw;
+  border-radius: 0.5vw;
+  border: none;
+  outline: none;
+  background-color: #4f46e5;
+  color: azure;
+  font-weight: 900;
+  box-shadow: 0 0 0.4vw rgba(0, 0, 0, 0.5), 0 0 0 0.15vw transparent;
+}
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: lightblue;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(112, 139, 175);
+}
