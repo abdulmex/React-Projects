@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Text-Expander
 
 This is a text expander component
