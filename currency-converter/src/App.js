@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 export default function App() {
-  const [amount, setAmount] = useState(1);
+  const [amount, setAmount] = useState();
   const [fromCur, setFromCur] = useState("EUR");
   const [toCur, setToCur] = useState("USD");
   const [converted, setConverted] = useState("");
@@ -48,6 +48,7 @@ function Input({ amount, setAmount, isLoading }) {
   return (
     <input
       type="number"
+      placeholder="Input amount to convert"
       value={amount}
       onChange={(e) => setAmount(Number(e.target.value))}
       className="input-field"
