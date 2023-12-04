@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #202632;
+  color: #fff;
+}
+.app {
+  width: 50vw;
+  padding: 2.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #313a49;
+  border-radius: 25px;
+}
+.input-field {
+  width: 20vw;
+  padding: 0.6em;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: larger;
+}
+.currency {
+  padding: 0.6em;
+  margin-left: 2em;
+  margin-top: 1em;
+  border: 1px solid grey;
+  border-radius: 10px;
+  outline: none;
+}
+.output {
+  background-color: #27a566;
+  text-align: center;
+  padding: 0.5em;
+  margin: 1em auto;
+  width: 34vw;
+  border-radius: 15px;
+  font-weight: bolder;
+  font-size: larger;
+}
